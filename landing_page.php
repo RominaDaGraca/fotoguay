@@ -21,7 +21,6 @@
             <h1>FOTOGUAY</h1>
             <div class="subtitle">Vota por la foto que más te guste</div>
         </header>
-
         <section class="images">
             <div class="images-container">
                 <img src="./img_landing/foto01.jpg" alt="Imagen 1">

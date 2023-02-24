@@ -1,7 +1,29 @@
 <?php
-
+if (isset($_POST['submit'])) {
+    // Recuperación de los datos del formulario
+    $username = $_POST['email'];
+    $password = $_POST['password'];
+  
+    // Consulta para verificar si el usuario y la contraseña coinciden
+    $sql = "SELECT * FROM usuario WHERE email='$username' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+  
+    // Comprobación del resultado de la consulta
+    if (mysqli_num_rows($result) == 1) {
+      // Inicio de sesión exitoso
+      session_start();
+      $_SESSION['email'] = $username;
+      header("Location: foto_guay.php"); // Redirige a la página principal
+      exit();
+    } else {
+      // Inicio de sesión fallido
+      echo "Usuario o contraseña incorrectos";
+    }
+  }
+  
+  // Cierre de la conexión a la base de datos
+  //mysqli_close($conn);
 ?>
-
 
 
 <!DOCTYPE html>
@@ -23,7 +45,7 @@
         <img src=""class="img-fluid" alt="">
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        <form method="post">
+        <form action="foto_guay.php" method="post">
           <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
             <p class="lead fw-normal mb-0 me-3">Sign in</p>
             <button type="button" class="btn btn-primary btn-floating mx-1">
@@ -61,7 +83,7 @@
     
 
           <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="button" class="btn btn-primary btn-lg"
+            <button type="submit" class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
             <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.php"
                 class="link-danger">Register</a></p>
