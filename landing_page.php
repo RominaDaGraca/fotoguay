@@ -25,37 +25,49 @@
             <div class="images-container">
                 <img src="./img_landing/foto01.jpg" alt="Imagen 1">
                 <div>
-                    <button>Votar ahora</button>
+                    <a href="login.php" class="votar-ahora">
+                        <button type="button">Votar ahora</button>
+                    </a>
                 </div>
             </div>
             <div class="images-container">
                 <img src="./img_landing/foto02.jpg" alt="Imagen 2">
                 <div>
-                    <button>Votar ahora</button>
+                    <a href="login.php" class="votar-ahora">
+                        <button type="button">Votar ahora</button>
+                    </a>
                 </div>
             </div>
             <div class="images-container">
                 <img src="./img_landing/foto03.jpg" alt="Imagen 3">
                 <div>
-                    <button>Votar ahora</button>
+                    <a href="login.php" class="votar-ahora">
+                        <button type="button">Votar ahora</button>
+                    </a>
                 </div>
             </div>
             <div class="images-container">
                 <img src="./img_landing/foto04.jpg" alt="Imagen 4">
                 <div>
-                    <button>Votar ahora</button>
+                    <a href="login.php" class="votar-ahora">
+                        <button type="button">Votar ahora</button>
+                    </a>
                 </div>
             </div>
             <div class="images-container">
                 <img src="./img_landing/foto05.jpg" alt="Imagen 5">
                 <div>
-                    <button>Votar ahora</button>
+                    <a href="login.php" class="votar-ahora">
+                        <button type="button">Votar ahora</button>
+                    </a>
                 </div>
             </div>
             <div class="images-container">
                 <img src="./img_landing/foto06.jpg" alt="Imagen 6">
                 <div>
-                    <button>Votar ahora</button>
+                    <a href="login.php" class="votar-ahora">
+                        <button type="button">Votar ahora</button>
+                    </a>
                 </div>
             </div>
         </section>

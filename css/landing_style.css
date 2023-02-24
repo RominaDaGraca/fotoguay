@@ -61,4 +61,7 @@
     height: 100%;
     object-fit: cover;
   }
+  .votar-ahora:hover {
+    cursor: help;
+  }
 
