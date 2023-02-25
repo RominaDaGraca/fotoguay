@@ -4,9 +4,6 @@
     margin: 0 auto;
 }
 
-
-
-
 .header {
     background-color: #477bec;
     color: #fff;
@@ -14,7 +11,9 @@
     text-align: center;
     border-radius: 15px;
 }
-
+.h-custom {
+    height: calc(100% - 73px);
+    }
 
 .subtitle {
     font-size: 18px;
@@ -28,7 +27,6 @@
     grid-gap: 40px;
     align-items: center;
     justify-items: center;
-
 }
 
 .images img {
@@ -64,4 +62,10 @@
   .votar-ahora:hover {
     cursor: help;
   }
+
+  @media (max-width: 450px) {
+    .h-custom {
+    height: 100%;
+    }
+    }
 

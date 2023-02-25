@@ -42,28 +42,14 @@ if (isset($_POST['submit'])) {
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src=""class="img-fluid" alt="">
+        <img src="img/playa.jpg"class="img-fluid" alt="">
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <form action="foto_guay.php" method="post">
           <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p class="lead fw-normal mb-0 me-3">Sign in</p>
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-facebook-f"></i>
-            </button>
-
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-twitter"></i>
-            </button>
-
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-linkedin-in"></i>
-            </button>
+            <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign in</p>
           </div>
 
-          <div class="divider d-flex align-items-center my-4">
-            <p class="text-center fw-bold mx-3 mb-0">Or</p>
-          </div>
 
           <!-- Email input -->
           <div class="form-outline mb-4">
@@ -97,24 +83,13 @@ if (isset($_POST['submit'])) {
     class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
     <!-- Copyright -->
     <div class="text-white mb-3 mb-md-0">
-      Copyright © 2020. All rights reserved.
+      Copyright © 2023. 
     </div>
     <!-- Copyright -->
 
     <!-- Right -->
-    <div>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="#!" class="text-white">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
+    <div class="text-white mb-3 mb-md-0">
+      Carlos, Santi, Leonar y Romi.
     </div>
     <!-- Right -->
   </div>
