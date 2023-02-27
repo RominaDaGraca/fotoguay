@@ -74,5 +74,17 @@
         </div>
 
     </div>
+
+    <script>
+        
+        fetch("index.php")
+        .then(datos=>datos.text())
+        .then(dat=>{
+            console.log(dat);
+        })
+    
+    </script>
+
+   
 </body>
 </html>
