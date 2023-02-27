@@ -29,7 +29,7 @@ $stm=$link->prepare($queryInsert);
 $stm->bind_param("sd",$imagenes,$votos);
 
 if ($stm->execute()) {
-    header("Location: alta.html");
+    header("Location: contador.html");
     exit();
 } else {
     echo "No se ingresaron los votos. <br>";
