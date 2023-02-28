@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include('conexion.php');
 
 if (isset($_POST['nombre'])) {
@@ -44,36 +45,36 @@ if (isset($_POST['nombre'])) {
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Regístrate</p>
 
                 <form method="post" class="mx-1 mx-md-4">
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="nombre" name="nombre" class="form-control" />
                       <label class="form-label" for="nombre">Nombre</label>
+                      <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Introduce tu nombre"/>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="email" name="email" class="form-control" />
-                      <label class="form-label" for="email">Email</label>
+                      <label class="form-label" for="email">Correo </label>
+                      <input type="text" id="email" name="email" class="form-control" placeholder="Introduce tu correo" />
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="password" name="password" class="form-control" />
-                      <label class="form-label" for="password">Password</label>
+                    <label class="form-label" for="password">Contraseña</label>
+                      <input type="password" id="password" name="password" class="form-control" placeholder="Introduce tu contraseña" />
                     </div>
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                    <button type="submit" class="btn btn-primary btn-lg">Regístrate</button>
                   </div>
 
                 </form>
@@ -81,7 +82,7 @@ if (isset($_POST['nombre'])) {
               </div>
               <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                <img src="img/perros.jpg" class="img-fluid" alt="">
+                <img src="https://fotoguay.leonar.dev/src/img/perros.jpg" class="img-fluid" alt="">
 
               </div>
             </div>

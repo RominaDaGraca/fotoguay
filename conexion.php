@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "fotoguay";
+$database = "fotos_web";
 $username = "root";
 $password = "";
 // Create connection
