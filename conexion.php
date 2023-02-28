@@ -1,14 +1,12 @@
 <?php
-$servername = "localhost";
-$database = "fotos_web";
-$username = "root";
-$password = "";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+  $host_name = 'localhost';
+  $database = 'fotoguay';
+  $user_name = 'root';
+  $password = '';
 
+  $conn = new mysqli($host_name, $user_name, $password, $database);
 
+  if ($conn->connect_error) {
+    die('<p>Error al conectar con servidor MySQL: '. $conn->connect_error .'</p>');
+  }
 ?>

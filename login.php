@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
       // Inicio de sesión fallido
       echo "Usuario o contraseña incorrectos";
     }
+    
   }
   
   // Cierre de la conexión a la base de datos
