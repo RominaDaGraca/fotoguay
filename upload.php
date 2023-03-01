@@ -3,7 +3,7 @@ ob_start();
 // Include the database configuration file
 include 'conexion.php';
 $statusMsg = '';
-
+session_start();
 // File upload path
 $targetDir = "uploads/";
 $fileName = basename($_FILES["file"]["name"]);
@@ -17,7 +17,10 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
         // Upload file to server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
-            $insert = $conn->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
+            $consulta="INSERT into images (file_name, uploaded_on, id_usuario) VALUES ('".$fileName."', NOW(),".$_SESSION["id"].")";
+
+            $insert = $conn->query($consulta);
+           
             if($insert){
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
                 header("Location: fotos.php");

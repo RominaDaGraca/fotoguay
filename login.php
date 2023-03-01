@@ -1,18 +1,26 @@
 <?php
+
 if (isset($_POST['submit'])) {
+  require_once("conexion.php");
     // Recuperación de los datos del formulario
     $username = $_POST['email'];
     $password = $_POST['password'];
   
     // Consulta para verificar si el usuario y la contraseña coinciden
     $sql = "SELECT * FROM usuario WHERE email='$username' AND password='$password'";
+
     $result = mysqli_query($conn, $sql);
   
     // Comprobación del resultado de la consulta
     if (mysqli_num_rows($result) == 1) {
       // Inicio de sesión exitoso
       session_start();
+      $user=$result->fetch_assoc();
+
+      $_SESSION['id']=$user["id"];
+      $_SESSION['username']=$user["nombre"];
       $_SESSION['email'] = $username;
+      
       header("Location: fotos.php"); // Redirige a la página principal
       exit();
     } else {
@@ -51,7 +59,7 @@ if (isset($_POST['submit'])) {
 
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Inicia Sessión</p>
 
-                <form action="fotos.php" method="post" class="mx-1 mx-md-4">
+                <form action="" method="post" class="mx-1 mx-md-4">
 
                   <div class="d-flex flex-row align-items-center mb-4">
                   <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
@@ -70,7 +78,7 @@ if (isset($_POST['submit'])) {
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit" class="btn btn-primary btn-lg">Entrar</button>
+                    <button type="submit" name="submit" class="btn btn-primary btn-lg">Entrar</button>
                   </div>
 
                   <div class="text-center text-lg-start mt-4 pt-2">
