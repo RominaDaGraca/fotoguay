@@ -59,7 +59,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
 
   <div class="contenedor-galeria">
     <?php
-    $consulta="SELECT I.id as idfoto,I.file_name,U.nombre,COUNT(V.id_usuario) as votos FROM `images` as I inner join usuario as U on I.id_usuario=U.id left join votos as V on I.id=V.id_imagen GROUP by V.id_imagen";
+    $consulta="SELECT I.id as idfoto,I.file_name,U.nombre,COUNT(V.id_usuario) as votos FROM `images` as I inner join usuario as U on I.id_usuario=U.id left join votos as V on I.id=V.id_imagen GROUP by V.id_imagen order by votos desc";
     $query = mysqli_query($conn, $consulta);
     if ($query->num_rows > 0) {
       $contenido = "";
@@ -72,6 +72,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
       
       <img src='" . $imageURL . "' alt=''>
             <div class='caja-hover'>
+            <span>".$row['votos']."</span>
             <i class='fa-solid fa-heart'></i>
             </div>
         </div></form>";

@@ -43,7 +43,7 @@
 
     </div>
     <div class="d-grid gap-2">
-        <a href="https://fotoguay.leonar.dev/login.php" class="btn btn-primary">Votar ahora</a>
+        <a href="login.php" class="btn btn-primary">Votar ahora</a>
     </div>
 </body>
 
