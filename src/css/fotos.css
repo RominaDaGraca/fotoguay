@@ -10,7 +10,18 @@ body{
     background: rgb(2,0,36);
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
-
+.image-upload>input {
+    display: none;
+  }
+.iconos{
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    margin: 0 auto;
+}
+.iconos p{
+    font-size: 20px;
+}
 .contenedor-galeria{
     display: flex;
     justify-content: space-evenly;
