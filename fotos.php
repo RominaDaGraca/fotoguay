@@ -46,10 +46,9 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     </form>
 
     <div class="container-fluid">
-      <div>
         <a href="./?logout=true" class="text-light fw-bolder text-decoration-none"><i class="fa fa-sign-out"></i> <?= $_SESSION['username'] ?></a>
-      </div>
     </div>
+
   </div>
 
   <div class="contenedor-galeria">

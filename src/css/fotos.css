@@ -10,6 +10,16 @@ body{
     background: rgb(2,0,36);
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
+.container-fluid{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.container-fluid a{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 .image-upload>input {
     display: none;
   }
@@ -22,6 +32,7 @@ body{
 .iconos p{
     font-size: 20px;
 }
+
 .contenedor-galeria{
     display: flex;
     justify-content: space-evenly;
