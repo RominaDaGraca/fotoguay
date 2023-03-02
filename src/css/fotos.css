@@ -59,6 +59,9 @@ body{
     object-fit: cover; /*para q no se deforme tanto la img*/
 
 }
+#previsualizarImg{
+    width: 100%;
+}
 @media screen and (max-width:900px){
     .caja-galeria{
         width: 45%;

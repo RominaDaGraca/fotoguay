@@ -1,6 +1,4 @@
 <?php
-// Include the database configuration file
-
 
 session_start();
 
@@ -15,8 +13,6 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
   session_destroy();
   header("location:login.php");
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -32,13 +28,10 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
   <!-- Fancybox CSS -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
   <title>Vota Tu foto Favorita</title>
-
 </head>
 
 <body>
-
 
   <div class="text-center p-3 mb-2 text-white header">
     <h1>FotoGuay</h1>
@@ -50,12 +43,6 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
         </label>
         <input type="file" id="file_input" name="file">
       </div>
-
-
-
-
-
-
     </form>
 
     <div class="container-fluid">
@@ -65,13 +52,9 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     </div>
   </div>
 
-
-
-
-
   <div class="contenedor-galeria">
     <?php
-    $consulta = "SELECT I.id as idfoto,I.file_name,U.nombre,COUNT(V.id_usuario) as votos FROM `images` as I inner join usuario as U on I.id_usuario=U.id left join votos as V on I.id=V.id_imagen GROUP by V.id_imagen order by votos desc";
+    $consulta = "SELECT I.id as idfoto,I.file_name,U.nombre,COUNT(V.id_usuario) as votos FROM `images` as I inner join usuario as U on I.id_usuario=U.id left join votos as V on I.id=V.id_imagen GROUP by I.id order by votos desc";
     $query = mysqli_query($conn, $consulta);
     if ($query->num_rows > 0) {
       $contenido = "";
@@ -96,14 +79,12 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     ?>
   </div>
 
-
-  
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Previsualización</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -118,6 +99,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
       </div>
     </div>
   </div>
+
   <script>
     $('.fa-heart').click((e) => {
       $(e.currentTarget.parentElement.parentElement).submit()
@@ -139,5 +121,4 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     })
   </script>
 </body>
-
 </html>
