@@ -16,7 +16,7 @@
 
     <header class="header">
         <h1>FOTOGUAY</h1>
-        <div class="subtitle">¡DAR LIKE! Nuca fue tan divert...</div>
+        <div class="subtitle">¡DAR LIKE! Nuca fue tan divertido</div>
     </header>
     <div class="container h-custom images">
         <div class="row">

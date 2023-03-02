@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2023 a las 18:22:07
+-- Tiempo de generación: 02-03-2023 a las 16:41:16
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.1.12
 
@@ -40,7 +40,10 @@ CREATE TABLE `images` (
 
 INSERT INTO `images` (`id`, `file_name`, `uploaded_on`, `id_usuario`) VALUES
 (1, 'masood-aslami-AsbqA0h_H9g-unsplash.jpg', '2023-03-01 16:41:33', 16),
-(2, 'playa.jpg', '2023-03-01 16:42:58', 16);
+(2, 'playa.jpg', '2023-03-01 16:42:58', 16),
+(3, 'adobestock_290425327-small.jpg', '2023-03-01 18:47:15', 17),
+(4, 'masood-aslami-AsbqA0h_H9g-unsplash.jpg', '2023-03-01 19:35:14', 17),
+(5, 'adobestock_290425327-small.jpg', '2023-03-02 15:57:24', 16);
 
 -- --------------------------------------------------------
 
@@ -74,7 +77,8 @@ INSERT INTO `usuario` (`id`, `nombre`, `email`, `password`) VALUES
 (13, 'alicia', 'alicia@gmail.com', '1234'),
 (14, 'dkfjn', 'manolo@gmail.com', '1234'),
 (15, 'andrea', 'andrea@gmail.com', '1234'),
-(16, 'romina', 'romidagraca@gmail.com', '1234');
+(16, 'romina', 'romidagraca@gmail.com', '1234'),
+(17, 'tomas', 'tomas@gmail.com', '1234');
 
 -- --------------------------------------------------------
 
@@ -92,7 +96,12 @@ CREATE TABLE `votos` (
 --
 
 INSERT INTO `votos` (`id_usuario`, `id_imagen`) VALUES
-(16, 1);
+(16, 1),
+(16, 2),
+(16, 5),
+(17, 1),
+(17, 2),
+(17, 3);
 
 --
 -- Índices para tablas volcadas
@@ -114,7 +123,7 @@ ALTER TABLE `usuario`
 -- Indices de la tabla `votos`
 --
 ALTER TABLE `votos`
-  ADD PRIMARY KEY (`id_usuario`);
+  ADD PRIMARY KEY (`id_usuario`,`id_imagen`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -124,13 +133,13 @@ ALTER TABLE `votos`
 -- AUTO_INCREMENT de la tabla `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
